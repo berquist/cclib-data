@@ -577,7 +577,7 @@ def testNWChem_NWChem6_0_hydrogen_atom_ROHF_cc_pVDZ_out(logfile):
     assert logfile.data.nmo == 5
     assert len(logfile.data.moenergies) == 1
     assert logfile.data.moenergies[0].shape == (5,)
-    assert logfile.data.homos.shape == (2,)
+    assert len(logfile.data.homos.shape) == 2
     assert logfile.data.homos[0] == 0
     assert logfile.data.homos[1] == -1
 
@@ -595,7 +595,7 @@ def testNWChem_NWChem6_0_hydrogen_atom_UHF_cc_pVDZ_out(logfile):
     assert len(logfile.data.moenergies) == 2
     assert logfile.data.moenergies[0].shape == (5,)
     assert logfile.data.moenergies[1].shape == (5,)
-    assert logfile.data.homos.shape == (2,)
+    assert len(logfile.data.homos.shape) == 2
     assert logfile.data.homos[0] == 0
     assert logfile.data.homos[1] == -1
 
