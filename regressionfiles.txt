@@ -459,4 +459,6 @@ QChem/QChem4.4/Trp_polar_ideriv1.out
 QChem/QChem4.4/Trp_polar_response.out
 QChem/QChem5.0/438.out
 QChem/QChem5.0/argon.out
+QChem/QChem5.1/vib_isotopes.out
+QChem/QChem5.1/vib_tp.out
 Turbomole/Turbomole7.2/dvb_gopt_b3-lyp_Gaussian

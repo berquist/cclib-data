@@ -1,0 +1,630 @@
+gold 127.0.0
+Q-Chem Developer Version! Running on 127.0.0.*
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.1, Q-Chem, Inc., Pleasanton, CA (2018)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,  
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,  
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,  
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,  
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,  
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,  
+ Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,  J. Gonthier,  A. Gunina,  
+ D. Hait,  M. W. D. Hanson-Heine,  P. H. P. Harbach,  A. W. Hauser,  
+ J. E. Herr,  E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  
+ T.-C. Jagau,  Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  
+ P. Klunzinger,  K. Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  
+ C. M. Krauter,  A. Kunitsa,  Ka Un Lao,  A. Laurent,  K. V. Lawler,  
+ Joonho Lee,  D. Lefrancois,  S. Lehtola,  D. S. Levine,  Yi-Pei Li,  
+ You-Sheng Lin,  Fenglai Liu,  E. Livshits,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  T. M. Perrine,  F. Plasser,  P. Pokhilko,  S. Prager,  
+ A. Prociuk,  E. Ramos,  D. R. Rehn,  F. Rob,  M. Schneider,  N. Sergueev,  
+ S. M. Sharada,  S. Sharma,  D. W. Small,  T. Stauch,  T. Stein,  
+ Yu-Chuan Su,  A. J. W. Thom,  A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  
+ L. Vogt,  M. L. Vidal,  O. Vydrov,  M. A. Watson,  J. Wenzel,  
+ M. de Wergifosse,  T. A. Wesolowski,  A. White,  J. Witte,  A. Yamada,  
+ Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  Zhi-Qiang You,  A. Zech,  
+ Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  Ying Zhu,  B. R. Brooks,  
+ G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  
+ A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  
+ D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,  
+ L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,  
+ A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.1.0 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+Compilation information
+-----------------------
+
+ SVN revision             | 28506
+ SVN branch               | trunk
+ Last SVN revision        | 28503
+ Last SVN author          | myz
+ Hostname                 | gold
+ User                     | eric
+ System                   | Linux-4.17.2-1-ARCH
+ Processor                | x86_64
+ Compiler                 | GNU
+ C compiler version       | 8.1.1
+ CXX compiler version     | 8.1.1
+ Fortran compiler version | 8.1.1
+ Configuration time       | 2018-06-21 10:52:55
+
+
+ Q-Chem begins on Fri Aug  3 13:10:27 2018  
+
+Host: gold
+0
+
+     Scratch files written to /tmp/qchem/qchem15151//
+Input Ideriv = 2
+Curr. Ideriv = -1
+Max.  Ideriv = 2
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$rem
+jobtype		freq
+method		hf
+basis		sto-3g
+isotopes	true
+$end
+
+$molecule
+0 1
+O         0.0000000000    0.0000000000    0.1271316000
+H        -0.7580950000    0.0000000000   -0.5085264000
+H         0.7580950000    0.0000000000   -0.5085264000
+$end
+
+$isotopes
+3 1           ! "1" here means we will set T & P
+0 500.0  1.0  ! 500 K, 1 atm, standard masses
+0 298.0 10.0  ! 298 K, 10 atm, standard masses
+2 500.0  1.0  ! 500 K, 1 atm, subst. D for H
+ 2 2.0141018
+ 3 2.0141018
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      O      -0.0000000000    -0.0000000000     0.1271316000
+    2      H      -0.7580950000    -0.0000000000    -0.5085264000
+    3      H       0.7580950000     0.0000000000    -0.5085264000
+ ----------------------------------------------------------------
+ Molecular Point Group                 C2v   NOp =  4
+ Largest Abelian Subgroup              C2v   NOp =  4
+ Nuclear Repulsion Energy =     8.9071892502 hartrees
+ There are        5 alpha and        5 beta electrons
+ Requested basis set is STO-3G
+ There are 4 shells and 7 basis functions
+
+ Total QAlloc Memory Limit   2000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+
+                       Distance Matrix (Angstroms)
+             O (  1)   H (  2)
+   H (  2)  0.989328
+   H (  3)  0.989328  1.516190
+
+ A cutoff of  1.0D-11 yielded     10 shell pairs
+ There are        34 function pairs
+ Smallest overlap matrix eigenvalue = 3.63E-01
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 10.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -74.6060342645      4.01e-01  
+    2     -74.9233315246      6.78e-02  
+    3     -74.9653426050      8.76e-03  
+    4     -74.9658786404      1.57e-03  
+    5     -74.9659011569      2.74e-05  
+    6     -74.9659011693      1.07e-05  
+    7     -74.9659011715      7.88e-08  
+    8     -74.9659011715      3.34e-11  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 0.05s  wall 0.00s 
+ SCF   energy in the final basis set =      -74.9659011715
+ Total energy in the final basis set =      -74.9659011715
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-20.252  -1.258  -0.594  -0.460  -0.393
+  1 A1    2 A1    1 B1    3 A1    1 B2                                         
+ -- Virtual --                   
+  0.582   0.693
+  4 A1    2 B1                                                                 
+
+ Beta MOs, Restricted
+ -- Occupied --                  
+-20.252  -1.258  -0.594  -0.460  -0.393
+  1 A1    2 A1    1 B1    3 A1    1 B2                                         
+ -- Virtual --                   
+  0.582   0.693
+  4 A1    2 B1                                                                 
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 O                    -0.330619
+      2 H                     0.165310
+      3 H                     0.165310
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y      -0.0000      Z      -1.7092
+       Tot       1.7092
+    Quadrupole Moments (Debye-Ang)
+        XX      -4.4852     XY       0.0000     YY      -6.1256
+        XZ       0.0000     YZ       0.0000     ZZ      -5.3334
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY      -0.0000    XYY      -0.0000
+       YYY      -0.0000    XXZ      -0.5315    XYZ      -0.0000
+       YYZ       0.0192    XZZ      -0.0000    YZZ      -0.0000
+       ZZZ      -0.1745
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX      -6.7329   XXXY       0.0000   XXYY      -1.8084
+      XYYY       0.0000   YYYY      -3.2652   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ       0.0000   YYYZ       0.0000
+      XXZZ      -1.7389   XYZZ       0.0000   YYZZ      -1.4595
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ      -5.2186
+ -----------------------------------------------------------------
+ Calculating MO derivatives via CPSCF
+   1        10           2      0.009891    0.007092
+   2        12           0      0.000000    0.000000    Roots Converged
+ Time for AOints: 0.0 s (CPU) 0.0 s (wall)
+ ------------------------------------------------------------------------------
+                     AOints        : Timing summary (seconds)
+ ------------------------------------------------------------------------------
+     job step          cpu (% of tot)      sys (% of tot)     wall (% of tot)
+ ------------------------------------------------------------------------------
+  cpscf_lag         0.4467E-02 (61.9)   0.0000E+00 ( NaN)   0.4490E-02 (62.0)
+  iterzp            0.1620E-02 (22.5)   0.0000E+00 ( NaN)   0.1626E-02 (22.5)
+  make_fx           0.0000E+00 ( 0.0)   0.0000E+00 ( NaN)   0.0000E+00 ( 0.0)
+  AOints            0.8820E-03 (12.2)   0.0000E+00 ( NaN)   0.8823E-03 (12.2)
+ ------------------------------------------------------------------------------
+   Grand Totals     0.7212E-02          0.0000E+00          0.7239E-02
+ ------------------------------------------------------------------------------
+ Calculating analytic Hessian of the SCF energy
+ Polarizability Matrix (a.u.)
+            1           2           3
+    1  -5.5074394  -0.0000000  -0.0000000
+    2  -0.0000000  -0.0400674  -0.0000000
+    3  -0.0000000  -0.0000000  -2.5645983
+
+ Direct stationary perturbation theory relativistic correction:
+
+ rels  =       0.031221267436
+ relv  =      -0.096843959057
+ rel2e =       0.023322510164
+ E_rel =      -0.042300181456
+
+ Hessian of the SCF Energy
+            1           2           3           4           5           6
+    1   0.8043990  -0.0000000  -0.0000000  -0.4021995   0.0000000  -0.3372981
+    2  -0.0000000  -0.0001343  -0.0000000   0.0000000   0.0000672   0.0000000
+    3  -0.0000000  -0.0000000   0.6349773  -0.2164471   0.0000000  -0.3174887
+    4  -0.4021995   0.0000000  -0.2164471   0.4391121  -0.0000000   0.2768726
+    5   0.0000000   0.0000672   0.0000000  -0.0000000  -0.0000497  -0.0000000
+    6  -0.3372981   0.0000000  -0.3174887   0.2768726  -0.0000000   0.3001394
+    7  -0.4021995   0.0000000   0.2164471  -0.0369126  -0.0000000   0.0604255
+    8  -0.0000000   0.0000672  -0.0000000   0.0000000  -0.0000175  -0.0000000
+    9   0.3372981  -0.0000000  -0.3174887  -0.0604255   0.0000000   0.0173492
+            7           8           9
+    1  -0.4021995  -0.0000000   0.3372981
+    2   0.0000000   0.0000672  -0.0000000
+    3   0.2164471  -0.0000000  -0.3174887
+    4  -0.0369126   0.0000000  -0.0604255
+    5  -0.0000000  -0.0000175   0.0000000
+    6   0.0604255  -0.0000000   0.0173492
+    7   0.4391121   0.0000000  -0.2768726
+    8   0.0000000  -0.0000497   0.0000000
+    9  -0.2768726   0.0000000   0.3001394
+ Gradient time:  CPU 0.02 s  wall 0.02 s
+Vibrational frequencies will be calculated for isotopes
+
+Number of loops through sets of isotopes:     4
+
+Vibman isotope loop:     1
+ **********************************************************************
+ **                                                                  **
+ **                       VIBRATIONAL ANALYSIS                       **
+ **                       --------------------                       **
+ **                                                                  **
+ **        VIBRATIONAL FREQUENCIES (CM**-1) AND NORMAL MODES         **
+ **     FORCE CONSTANTS (mDYN/ANGSTROM) AND REDUCED MASSES (AMU)     **
+ **                  INFRARED INTENSITIES (KM/MOL)                   **
+ **                                                                  **
+ **********************************************************************
+
+
+ Mode:                 1                      2                      3
+ Frequency:      2169.77                4140.85                4392.07
+ Force Cnst:      2.9916                10.5985                12.2450
+ Red. Mass:       1.0785                 1.0491                 1.0774
+ IR Active:          YES                    YES                    YES
+ IR Intens:        7.247                 44.268                 29.943
+ Raman Active:       YES                    YES                    YES
+               X      Y      Z        X      Y      Z        X      Y      Z
+ O         -0.000 -0.000 -0.069   -0.000 -0.000  0.052   -0.068 -0.000  0.000
+ H         -0.448 -0.000  0.545   -0.570 -0.000 -0.416    0.541  0.000  0.453
+ H          0.448  0.000  0.545    0.570 -0.000 -0.416    0.541  0.000 -0.453
+ TransDip  -0.000  0.000  0.086    0.000 -0.000  0.213   -0.175  0.000 -0.000
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.15 K  AND     1.00 ATM
+
+   This Molecule has  0 Imaginary Frequencies
+   Zero point vibrational energy:       15.300 kcal/mol
+
+   Atom    1 Element O  Has Mass   15.99491
+   Atom    2 Element H  Has Mass    1.00783
+   Atom    3 Element H  Has Mass    1.00783
+   Molecular Mass:    18.010570 amu
+   Principal axes and moments of inertia in amu*Bohr^2:
+                             1           2           3
+    Eigenvalues --        2.58295     4.13678     6.71973
+          X               1.00000     0.00000    -0.00000
+          Y               0.00000     0.00000     1.00000
+          Z               0.00000     1.00000     0.00000
+   Rotational Symmetry Number is   2
+   The Molecule is an Asymmetric Top
+   Translational Enthalpy:        0.889 kcal/mol
+   Rotational Enthalpy:           0.889 kcal/mol
+   Vibrational Enthalpy:         15.300 kcal/mol
+   gas constant (RT):             0.592 kcal/mol
+   Translational Entropy:        34.608  cal/mol.K
+   Rotational Entropy:           10.672  cal/mol.K
+   Vibrational Entropy:           0.001  cal/mol.K
+
+   Total Enthalpy:               17.670 kcal/mol
+   Total Entropy:                45.281  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- TOSH
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- VPT2
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+
+Vibman isotope loop:     2
+ **********************************************************************
+ **                                                                  **
+ **                       VIBRATIONAL ANALYSIS                       **
+ **                       --------------------                       **
+ **                                                                  **
+ **        VIBRATIONAL FREQUENCIES (CM**-1) AND NORMAL MODES         **
+ **     FORCE CONSTANTS (mDYN/ANGSTROM) AND REDUCED MASSES (AMU)     **
+ **                  INFRARED INTENSITIES (KM/MOL)                   **
+ **                                                                  **
+ **********************************************************************
+
+
+ Mode:                 1                      2                      3
+ Frequency:      2169.77                4140.85                4392.07
+ Force Cnst:      2.9916                10.5985                12.2450
+ Red. Mass:       1.0785                 1.0491                 1.0774
+ IR Active:          YES                    YES                    YES
+ IR Intens:        7.247                 44.268                 29.943
+ Raman Active:       YES                    YES                    YES
+               X      Y      Z        X      Y      Z        X      Y      Z
+ O         -0.000 -0.000 -0.069   -0.000 -0.000  0.052   -0.068 -0.000  0.000
+ H         -0.448 -0.000  0.545   -0.570 -0.000 -0.416    0.541  0.000  0.453
+ H          0.448  0.000  0.545    0.570 -0.000 -0.416    0.541  0.000 -0.453
+ TransDip  -0.000  0.000  0.086    0.000 -0.000  0.213   -0.175 -0.000 -0.000
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   500.00 K  AND     1.00 ATM
+
+   This Molecule has  0 Imaginary Frequencies
+   Zero point vibrational energy:       15.300 kcal/mol
+
+   Atom    1 Element O  Has Mass   15.99491
+   Atom    2 Element H  Has Mass    1.00783
+   Atom    3 Element H  Has Mass    1.00783
+   Molecular Mass:    18.010570 amu
+   Principal axes and moments of inertia in amu*Bohr^2:
+                             1           2           3
+    Eigenvalues --        2.58295     4.13678     6.71973
+          X               1.00000     0.00000    -0.00000
+          Y               0.00000     0.00000     1.00000
+          Z               0.00000     1.00000     0.00000
+   Rotational Symmetry Number is   2
+   The Molecule is an Asymmetric Top
+   Translational Enthalpy:        1.490 kcal/mol
+   Rotational Enthalpy:           1.490 kcal/mol
+   Vibrational Enthalpy:         15.312 kcal/mol
+   gas constant (RT):             0.994 kcal/mol
+   Translational Entropy:        37.177  cal/mol.K
+   Rotational Entropy:           12.213  cal/mol.K
+   Vibrational Entropy:           0.028  cal/mol.K
+
+   Total Enthalpy:               19.287 kcal/mol
+   Total Entropy:                49.418  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- TOSH
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- VPT2
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+
+Vibman isotope loop:     3
+ **********************************************************************
+ **                                                                  **
+ **                       VIBRATIONAL ANALYSIS                       **
+ **                       --------------------                       **
+ **                                                                  **
+ **        VIBRATIONAL FREQUENCIES (CM**-1) AND NORMAL MODES         **
+ **     FORCE CONSTANTS (mDYN/ANGSTROM) AND REDUCED MASSES (AMU)     **
+ **                  INFRARED INTENSITIES (KM/MOL)                   **
+ **                                                                  **
+ **********************************************************************
+
+
+ Mode:                 1                      2                      3
+ Frequency:      2169.77                4140.85                4392.07
+ Force Cnst:      2.9916                10.5985                12.2450
+ Red. Mass:       1.0785                 1.0491                 1.0774
+ IR Active:          YES                    YES                    YES
+ IR Intens:        7.247                 44.268                 29.943
+ Raman Active:       YES                    YES                    YES
+               X      Y      Z        X      Y      Z        X      Y      Z
+ O         -0.000 -0.000 -0.069   -0.000 -0.000  0.052   -0.068 -0.000  0.000
+ H         -0.448 -0.000  0.545   -0.570 -0.000 -0.416    0.541  0.000  0.453
+ H          0.448  0.000  0.545    0.570 -0.000 -0.416    0.541  0.000 -0.453
+ TransDip  -0.000  0.000  0.086    0.000 -0.000  0.213   -0.175 -0.000 -0.000
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.00 K  AND    10.00 ATM
+
+   This Molecule has  0 Imaginary Frequencies
+   Zero point vibrational energy:       15.300 kcal/mol
+
+   Atom    1 Element O  Has Mass   15.99491
+   Atom    2 Element H  Has Mass    1.00783
+   Atom    3 Element H  Has Mass    1.00783
+   Molecular Mass:    18.010570 amu
+   Principal axes and moments of inertia in amu*Bohr^2:
+                             1           2           3
+    Eigenvalues --        2.58295     4.13678     6.71973
+          X               1.00000     0.00000    -0.00000
+          Y               0.00000     0.00000     1.00000
+          Z               0.00000     1.00000     0.00000
+   Rotational Symmetry Number is   2
+   The Molecule is an Asymmetric Top
+   Translational Enthalpy:        0.888 kcal/mol
+   Rotational Enthalpy:           0.888 kcal/mol
+   Vibrational Enthalpy:         15.300 kcal/mol
+   gas constant (RT):             0.592 kcal/mol
+   Translational Entropy:        30.030  cal/mol.K
+   Rotational Entropy:           10.670  cal/mol.K
+   Vibrational Entropy:           0.001  cal/mol.K
+
+   Total Enthalpy:               17.669 kcal/mol
+   Total Entropy:                40.701  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- TOSH
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- VPT2
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+
+Vibman isotope loop:     4
+ **********************************************************************
+ **                                                                  **
+ **                       VIBRATIONAL ANALYSIS                       **
+ **                       --------------------                       **
+ **                                                                  **
+ **        VIBRATIONAL FREQUENCIES (CM**-1) AND NORMAL MODES         **
+ **     FORCE CONSTANTS (mDYN/ANGSTROM) AND REDUCED MASSES (AMU)     **
+ **                  INFRARED INTENSITIES (KM/MOL)                   **
+ **                                                                  **
+ **********************************************************************
+
+
+ Mode:                 1                      2                      3
+ Frequency:      1584.64                2991.45                3211.94
+ Force Cnst:      3.3183                11.4659                13.7959
+ Red. Mass:       2.2429                 2.1747                 2.2697
+ IR Active:          YES                    YES                    YES
+ IR Intens:        4.247                 21.742                 13.693
+ Raman Active:       YES                    YES                    YES
+               X      Y      Z        X      Y      Z        X      Y      Z
+ O         -0.000 -0.000 -0.128   -0.000 -0.000  0.107   -0.135 -0.000  0.000
+ H         -0.484 -0.000  0.508   -0.560 -0.000 -0.426    0.537  0.000  0.450
+ H          0.484  0.000  0.508    0.560  0.000 -0.426    0.537  0.000 -0.450
+ TransDip  -0.000 -0.000  0.066    0.000  0.000  0.149   -0.119 -0.000 -0.000
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   500.00 K  AND     1.00 ATM
+
+   This Molecule has  0 Imaginary Frequencies
+   Zero point vibrational energy:       11.134 kcal/mol
+
+   Atom    1 Element O  Has Mass   15.99491
+   Atom    2 Element H  Has Mass    2.01410
+   Atom    3 Element H  Has Mass    2.01410
+   Molecular Mass:    20.023114 amu
+   Principal axes and moments of inertia in amu*Bohr^2:
+                             1           2           3
+    Eigenvalues --        4.64308     8.26716    12.91024
+          X               1.00000     0.00000    -0.00000
+          Y               0.00000     0.00000     1.00000
+          Z               0.00000     1.00000     0.00000
+   Rotational Symmetry Number is   2
+   The Molecule is an Asymmetric Top
+   Translational Enthalpy:        1.490 kcal/mol
+   Rotational Enthalpy:           1.490 kcal/mol
+   Vibrational Enthalpy:         11.184 kcal/mol
+   gas constant (RT):             0.994 kcal/mol
+   Translational Entropy:        37.492  cal/mol.K
+   Rotational Entropy:           14.132  cal/mol.K
+   Vibrational Entropy:           0.122  cal/mol.K
+
+   Total Enthalpy:               15.158 kcal/mol
+   Total Entropy:                51.747  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- TOSH
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+ STANDARD THERMODYNAMIC QUANTITIES FOR ANHARMONIC VIBRATION -- VPT2
+
+   Zero point vibrational energy: ************ kcal/mol
+
+   Vibrational Enthalpy:       Infinity kcal/mol
+   Vibrational Entropy:        Infinity  cal/mol.K
+
+   Total Enthalpy:             Infinity kcal/mol
+   Total Entropy:              Infinity  cal/mol.K
+
+ ======================================================================
+
+Archival summary:
+1\1\gold\FREQ\HF\STO-3G\12\eric\FriAug313:10:272018FriAug313:10:272018\0\\#,FREQ,HF,STO-3G,\\0,1\O\H,1,0.989328\H,1,0.989328,2,100.041\\HF=-74.9659012\\@
+
+ Total job time:  0.09s(wall), 0.09s(cpu) 
+ Fri Aug  3 13:10:27 2018
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
